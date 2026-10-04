@@ -63,6 +63,26 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        mac_app_switch: mac_app_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // Cmdを押す → Tabを1回だけ叩く → Cmdを離す
+            bindings = 
+                <&macro_press &kp LCMD>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LCMD>;
+        };
+
+        win_app_switch: win_app_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // Altを押す → Tabを1回だけ叩く → Altを離す
+            bindings = 
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp TAB>,
+                <&macro_release &kp LALT>;
+        };
     };
 
     behaviors {
