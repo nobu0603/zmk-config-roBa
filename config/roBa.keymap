@@ -9,8 +9,18 @@
     quick-tap-ms = <0>;
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        18 // J (MB1 - 左クリック)
+        19 // K (MB3 - 中クリック)
+        20 // L (MB2 - 右クリック)
+        30 // M (MB4 - 戻る)
+        31 // COMMA (MB5 - 進む)
+    >;
+};
+
 &trackball {
-    automouse-layer = <4>;
+    // automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
@@ -188,7 +198,7 @@
 };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 3 2>;
+    input-processors = <&zip_xy_scaler 3 2>, <&zip_temp_layer 4 10000>;
 
     sniper {
         layers = <7>;
