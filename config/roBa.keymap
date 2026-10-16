@@ -11,11 +11,9 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        18 // J (MB1 - 左クリック)
-        19 // K (MB3 - 中クリック)
-        20 // L (MB2 - 右クリック)
-        30 // M (MB4 - 戻る)
-        31 // COMMA (MB5 - 進む)
+        37 // 左手親指：INT_HENKANの位置（上記例の MB2）
+        38 // 左手親指：SPACEの位置（上記例の MB1）
+        39 // 左手親指：INT_MUHENKANの位置（上記例の MB3）
     >;
 };
 
